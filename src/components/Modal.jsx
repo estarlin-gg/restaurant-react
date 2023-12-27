@@ -1,16 +1,27 @@
+import { useState } from "react";
 import { Box, Container } from "./Containers";
 import { Button } from "./Elements";
 import { Form, Input, Label, Select } from "./Form";
 
-export const Modal = ({ info, modal }) => {
+export const Modal = ({ info, modal,reserva }) => {
+  const [inputs, setInput] = useState({});
   const { img, title, price } = info;
+  const handleInputs = (e) => {
+    setInput({
+      ...inputs,
+      [e.target.id]: e.target.value,
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    modal(false)
+    modal(false);
+    reserva(inputs)
   };
   const activateModal = () => {
     modal(false);
   };
+  console.log(inputs);
   return (
     <Container
       classes={
@@ -34,15 +45,24 @@ export const Modal = ({ info, modal }) => {
           <div className="row">
             <div className="mb-4">
               <Label text="Nombre:" />
-              <Input />
+              <Input
+                placeholder="Escribe tu nombre"
+                onChange={handleInputs}
+                id="nombre"
+              />
             </div>
             <div className="mb-4">
               <Label text="Mesa:" />
-              <Select />
+              <Select onChange={handleInputs} id="mesa" />
             </div>
             <div className="mb-4">
               <Label text="Fecha:" />
-              <Input type="date" />
+              <Input
+                type="date"
+                placeholder="Elige una fecha"
+                onChange={handleInputs}
+                id="fecha"
+              />
             </div>
             <div className="mb-4">
               <Button

@@ -5,21 +5,24 @@ import { products } from "./products";
 import { Modal } from "./Modal";
 
 export const ProductContainer = () => {
-  const [pedido, setPedido] = useState({});
+  const [servicio, setServicio] = useState({});
   const [modal, setModal] = useState(false);
   const viewModal = (e) => {
     setModal(e);
   };
   const handleOrder = (data) => {
-    setPedido(data);
+    setServicio(data);
     setModal(true);
   };
+  const reserva = (e) => {
+       
+  }
+
   // console.log(pedido);
 
   return (
     <section className="w-full ">
-      {/* <Modal info={pedido} /> */}
-      {modal && <Modal info={pedido} modal={viewModal} />}
+      {modal && <Modal info={servicio} modal={viewModal} reserva={reserva} />}
       <Box classes="p-4">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">
           Platos
