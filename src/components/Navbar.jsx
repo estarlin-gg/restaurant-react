@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Orders } from "./Orders";
 
 
-export const Navbar = () => {
+export const Navbar = ({list}) => {
   const [view, setView] = useState(false);
   const [orders, setOrders] = useState(false);
   const handleOrders = () => {

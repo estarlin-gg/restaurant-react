@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { Hero, Header, Container } from "./components/Containers";
 // import { Form } from "./components/Form";
@@ -7,6 +8,11 @@ import { Navbar } from "./components/Navbar";
 import { ProductContainer } from "./components/ProductCotainer";
 
 function App() {
+  const [data, setData] = useState({})
+  console.log(data);
+  const Recoger = (e) => {
+    setData(e)
+  }
   return (
     <>
       <Hero breakpoint="2xl" padding="" background="">
@@ -15,7 +21,7 @@ function App() {
         </Header>
         <Main />
       </Hero>
-      <ProductContainer />
+      <ProductContainer information={Recoger}  />
     </>
   );
 }

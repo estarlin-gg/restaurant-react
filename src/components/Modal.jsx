@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Container } from "./Containers";
 import { Button } from "./Elements";
 import { Form, Input, Label, Select } from "./Form";
 
 export const Modal = ({ info, modal, reserva }) => {
+
+  
   const [validar, setValidar] = useState(false);
   let alert = (
     <h2 className="block bg-red-400 text-white text-lg sm:text-2xl text-center capitalize w-full p-2">

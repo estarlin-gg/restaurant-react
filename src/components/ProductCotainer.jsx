@@ -4,7 +4,7 @@ import { Box } from "./Containers";
 import { products } from "./products";
 import { Modal } from "./Modal";
 
-export const ProductContainer = ({ info }) => {
+export const ProductContainer = ({ information }) => {
   const [servicio, setServicio] = useState({});
   const [modal, setModal] = useState(false);
   const viewModal = (e) => {
@@ -15,8 +15,8 @@ export const ProductContainer = ({ info }) => {
     setModal(true);
   };
 
-  const reserva = (e) => {
-    console.log(e);
+  const reserva = (data) => {
+    information(data)
   };
 
   return (
