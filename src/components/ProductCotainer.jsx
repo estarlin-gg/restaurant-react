@@ -4,7 +4,7 @@ import { Box } from "./Containers";
 import { products } from "./products";
 import { Modal } from "./Modal";
 
-export const ProductContainer = () => {
+export const ProductContainer = ({ info }) => {
   const [servicio, setServicio] = useState({});
   const [modal, setModal] = useState(false);
   const viewModal = (e) => {
@@ -14,11 +14,10 @@ export const ProductContainer = () => {
     setServicio(data);
     setModal(true);
   };
-  const reserva = (e) => {
-       
-  }
 
-  // console.log(pedido);
+  const reserva = (e) => {
+    console.log(e);
+  };
 
   return (
     <section className="w-full ">

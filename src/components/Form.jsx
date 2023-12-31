@@ -23,7 +23,7 @@ export const Select = ({ ...props }) => {
       className=" shadow block appearance-none w-full  px-4 py-2 pr-8 rounded  leading-tight  focus:outline-blue-500"
       {...props}
     >
-      <option defaultValue value={null}>
+      <option defaultValue value={''}>
         Elige una mesa
       </option>
       <option value="1">Mesa 1</option>

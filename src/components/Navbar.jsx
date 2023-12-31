@@ -1,15 +1,22 @@
 import "../App.css";
 import { useState } from "react";
-// import { Modal } from "./Modal";
+import { Orders } from "./Orders";
+
 
 export const Navbar = () => {
   const [view, setView] = useState(false);
+  const [orders, setOrders] = useState(false);
+  const handleOrders = () => {
+    setOrders((e) => !e);
+  };
   let newClass = view ? "translate-x-0" : "translate-x-full";
   const handleMenu = () => {
     setView((e) => !e);
   };
   return (
     <>
+      {orders && <Orders />}
+
       <div className="burguer block z-50 md:hidden ">
         <img
           src="/img/svg/bx-menu.svg"
@@ -53,9 +60,8 @@ export const Navbar = () => {
       </nav>
 
       <div className="menu block md:hidden cursor-pointer">
-        <img src="/img/svg/dish.png" alt="" width={44} />
+        <img src="/img/svg/dish.png" alt="" width={44} onClick={handleOrders} />
       </div>
-      {/* <Modal /> */}
     </>
   );
 };

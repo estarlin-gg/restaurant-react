@@ -10,7 +10,7 @@ export const Hero = ({ breakpoint, background, padding, children }) => {
 };
 export const Header = ({ children }) => {
   return (
-    <header className="h-15 w-full mx-auto flex justify-between items-center p-2 px-8  md:justify-around shadow-md md:relative fixed bg-white ">
+    <header className="h-15 w-full mx-auto flex justify-between items-center p-2 px-8  md:justify-around shadow-md s fixed bg-white ">
       {children}
     </header>
   );
