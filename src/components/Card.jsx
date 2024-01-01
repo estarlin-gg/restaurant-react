@@ -18,10 +18,9 @@ export const Card = ({ img, title, price, Orden }) => {
       <div className="card-footer w-full ">
         <Button
           text="Ordenar"
-          bgColor="bg-black"
-          color="text-white"
-          padding="3"
+         
           onClick={handleClick}
+          classes="p-3 bg-black text-white"
         />
       </div>
     </div>

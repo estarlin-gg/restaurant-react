@@ -7,6 +7,7 @@ export const Modal = ({ info, modal, reserva }) => {
 
   
   const [validar, setValidar] = useState(false);
+  const { img, title, price } = info;
   let alert = (
     <h2 className="block bg-red-400 text-white text-lg sm:text-2xl text-center capitalize w-full p-2">
       Todos los campos son obligatorio!!!
@@ -16,8 +17,10 @@ export const Modal = ({ info, modal, reserva }) => {
     nombre: "",
     fecha: "",
     mesa: "",
+    img:img,
+    title:title,
+    price:price
   });
-  const { img, title, price } = info;
   const handleInputs = (e) => {
     setInput({
       ...inputs,
@@ -88,11 +91,11 @@ export const Modal = ({ info, modal, reserva }) => {
             <div className="mb-4">
               <Button
                 text="Ordenar"
-                classes="block w-full bg-orange-600 text-white mb-4"
+                classes="block w-full bg-orange-600 text-white mb-4 p-4"
               />
               <Button
                 text="Regresar"
-                classes="block w-full bg-black text-white"
+                classes="block w-full bg-black text-white p-4"
                 onClick={activateModal}
               />
             </div>

@@ -19,9 +19,8 @@ export const Main = () => {
         </Text>
         <Button
           text="Get started"
-          classes="mt-4"
-          bgColor="bg-orange-600"
-          color="text-white"
+          classes="mt-4 p-4 bg-orange-600 text-white"
+        
         />
       </Box>
       <Box classes="hidden md:block w-fit ">

@@ -8,20 +8,20 @@ import { Navbar } from "./components/Navbar";
 import { ProductContainer } from "./components/ProductCotainer";
 
 function App() {
-  const [data, setData] = useState({})
+  const [data, setData] = useState({});
   console.log(data);
   const Recoger = (e) => {
-    setData(e)
-  }
+    setData(e);
+  };
   return (
     <>
       <Hero breakpoint="2xl" padding="" background="">
         <Header>
-          <Navbar />
+          <Navbar list={data} />
         </Header>
         <Main />
       </Hero>
-      <ProductContainer information={Recoger}  />
+      <ProductContainer information={Recoger} />
     </>
   );
 }

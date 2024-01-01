@@ -2,22 +2,20 @@ import "../App.css";
 import { useState } from "react";
 import { Orders } from "./Orders";
 
-
-export const Navbar = ({list}) => {
+export const Navbar = ({ list }) => {
   const [view, setView] = useState(false);
   const [orders, setOrders] = useState(false);
   const handleOrders = () => {
     setOrders((e) => !e);
   };
+  console.log(list);
   let newClass = view ? "translate-x-0" : "translate-x-full";
   const handleMenu = () => {
     setView((e) => !e);
   };
   return (
     <>
-      {orders && <Orders />}
-
-      <div className="burguer block z-50 md:hidden ">
+      <div className="burguer block z-40 md:hidden ">
         <img
           src="/img/svg/bx-menu.svg"
           className="cursor-pointer"
@@ -62,6 +60,7 @@ export const Navbar = ({list}) => {
       <div className="menu block md:hidden cursor-pointer">
         <img src="/img/svg/dish.png" alt="" width={44} onClick={handleOrders} />
       </div>
+      {orders && <Orders orders={list} hidden={handleOrders} />}
     </>
   );
 };
