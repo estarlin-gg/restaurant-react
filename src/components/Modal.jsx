@@ -15,7 +15,7 @@ export const Modal = ({ info, modal, reserva }) => {
   );
   const [inputs, setInput] = useState({
     nombre: "",
-    fecha: "",
+    hora: "",
     mesa: "",
     img:img,
     title:title,
@@ -29,9 +29,9 @@ export const Modal = ({ info, modal, reserva }) => {
   };
 
   const handleSubmit = (e) => {
-    const { fecha, nombre, mesa } = inputs;
+    const { hora, nombre, mesa } = inputs;
     e.preventDefault();
-    if (fecha === "" || nombre.trim === "" || mesa === "") {
+    if (hora === "" || nombre.trim === "" || mesa === "") {
       console.log("campos vacios");
       setValidar(true);
       return;
@@ -80,22 +80,22 @@ export const Modal = ({ info, modal, reserva }) => {
               <Select onChange={handleInputs} id="mesa" />
             </div>
             <div className="mb-4">
-              <Label text="Fecha:" />
+              <Label text="Hora:" />
               <Input
-                type="date"
-                placeholder="Elige una fecha"
+                type="time"
+                placeholder="Elige una hora"
                 onChange={handleInputs}
-                id="fecha"
+                id="hora"
               />
             </div>
             <div className="mb-4">
               <Button
                 text="Ordenar"
-                classes="block w-full bg-orange-600 text-white mb-4 p-4"
+                classes="block w-full bg-orange-600 text-white mb-4 p-4 rounded-xl"
               />
               <Button
                 text="Regresar"
-                classes="block w-full bg-black text-white p-4"
+                classes="block w-full bg-black text-white p-4 rounded-xl"
                 onClick={activateModal}
               />
             </div>

@@ -8,7 +8,7 @@ export const Button = ({ children,text, classes, ...props }) => {
   return (
     <button
       {...props}
-      className={`rounded-xl  font-medium  ${classes} hover:bg-opacity-90`}
+      className={`  font-medium  ${classes} hover:bg-opacity-90`}
     >
       {text}
       {children}

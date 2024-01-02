@@ -19,12 +19,11 @@ export const Main = () => {
         </Text>
         <Button
           text="Get started"
-          classes="mt-4 p-4 bg-orange-600 text-white"
-        
+          classes="mt-4 p-4 bg-orange-600 text-white rounded-xl"
         />
       </Box>
       <Box classes="hidden md:block w-fit ">
-        <img src="/img/hero-img.png" alt=""  className="md:w-full h-full " />
+        <img src="/img/hero-img.png" alt="" className="md:w-full h-full " />
       </Box>
     </main>
   );

@@ -20,7 +20,7 @@ export const Card = ({ img, title, price, Orden }) => {
           text="Ordenar"
          
           onClick={handleClick}
-          classes="p-3 bg-black text-white"
+          classes="p-3 bg-black text-white rounded-xl"
         />
       </div>
     </div>
