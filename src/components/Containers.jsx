@@ -1,8 +1,8 @@
 import "../App.css";
-export const Hero = ({ breakpoint, background, padding, children }) => {
+export const Hero = ({ breakpoint, background, children }) => {
   return (
     <div
-      className={` ${breakpoint} ${background} ${padding} mx-auto h-screen overflow-hidden md:h-[70vh]`}
+      className={` ${breakpoint} ${background}  mx-auto lg:h-fit`}
     >
       {children}
     </div>
@@ -10,7 +10,7 @@ export const Hero = ({ breakpoint, background, padding, children }) => {
 };
 export const Header = ({ children }) => {
   return (
-    <header className="h-15 w-full mx-auto flex justify-between items-center p-2 px-8  md:justify-around shadow-md s fixed bg-white ">
+    <header className="h-15 w-full mx-auto flex justify-between items-center p-2 px-8  md:justify-around shadow-md top-0 fixed bg-white ">
       {children}
     </header>
   );

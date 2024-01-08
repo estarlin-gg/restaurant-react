@@ -6,7 +6,7 @@ import { Button, Text, Title } from "./Elements";
 
 export const Main = () => {
   return (
-    <main className="grid md:grid-cols-2 md:p-1 md:px-8  place-items-center h-screen md:h-[70vh] md:bg-[url('../public/fondo.jpg')] bg-black bg-blend-multiply bg-opacity-30 bg-no-repeat bg-cover bg-[url('../public/hero-mobile.jpg')]   ">
+    <main className="grid lg:grid-cols-2 md:py-6 md:px-8  place-items-center h-screen md:h-fit lg:h-[60vh] lg:bg-[url('../public/fondo.jpg')] bg-black bg-blend-multiply bg-opacity-30 bg-no-repeat bg-cover bg-[url('../public/hero-mobile.jpg')]  md:mt-[70px] mb-30   ">
       <Box classes=" sm:pl-8  p-0 px-2 flex flex-col items-center gap-3 md:items-start ">
         <Title
           classes="text-4xl font-extrabold capitalize text-center md:text-left text-white"
@@ -23,7 +23,7 @@ export const Main = () => {
         />
       </Box>
       <Box classes="hidden md:block w-fit ">
-        <img src="/img/hero-img.png" alt="" className="md:w-full h-full " />
+        <img src="/img/hero-img.png" alt="" className="md:w-full h-full " style={{maxWidth: "500px", minWidth:"200px"}}  />
       </Box>
     </main>
   );

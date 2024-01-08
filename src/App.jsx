@@ -15,7 +15,7 @@ function App() {
   };
   return (
     <>
-      <Hero breakpoint="2xl" padding="" background="">
+      <Hero   background="">
         <Header>
           <Navbar list={data} />
         </Header>

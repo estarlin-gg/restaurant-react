@@ -47,10 +47,10 @@ export const Modal = ({ info, modal, reserva }) => {
   return (
     <Container
       classes={
-        "md:w-full bg-slate-950/50  fixed inset-0 flex items-center justify-center z-[100]"
+        "md:w-full bg-slate-950/50  fixed inset-0 flex items-center justify-center z-[100] overflow-y-auto"
       }
     >
-      <Box classes="bg-white h-screen justify-center sm:h-fit rounded-lg p-5 w-full  sm:min-w-[500px] flex flex-col gap-8 max-w-[600px] ">
+      <Box classes="bg-white h-fit justify-center sm:h-fit rounded-lg p-5 w-full   flex flex-col gap-8 max-w-[600px] overflow-y-auto ">
         <h1 className="text-center text-4xl">Reserva:</h1>
         <div className="w-full grid grid-cols-2  gap-2  p-2">
           <div className="bg-gray-200 grid place-items rounded-2xl p-4 aspect-video ">

@@ -20,14 +20,14 @@ export const ProductContainer = ({ information }) => {
   };
 
   return (
-    <section className="w-full ">
+    <section className="w-full md:mt-0 lg:m-0 ">
       {modal && <Modal info={servicio} modal={viewModal} reserva={reserva} />}
       <Box classes="p-4">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">
           Platos
         </h2>
       </Box>
-      <Box classes="grid p-4 grid-cols-1 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-4  gap-4 gap-y-8 lg:gap-x-8">
+      <Box classes="grid p-4 grid-cols-1 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-4  gap-4 gap-y-8 lg:gap-x-8 ">
         {products.map((product) => {
           const { name, image, price, id } = product;
           return (
