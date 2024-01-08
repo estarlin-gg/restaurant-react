@@ -4,9 +4,12 @@ import { Button } from "./Elements";
 import { Form, Input, Label, Select } from "./Form";
 
 export const Modal = ({ info, modal, reserva }) => {
-
-  
   const [validar, setValidar] = useState(false);
+  // const [complete, setComplete] = useState(false);
+
+  // useEffect(() => {
+  //   console.log("orden completada");
+  // }, [complete]);
   const { img, title, price } = info;
   let alert = (
     <h2 className="block bg-red-400 text-white text-lg sm:text-2xl text-center capitalize w-full p-2">
@@ -17,9 +20,9 @@ export const Modal = ({ info, modal, reserva }) => {
     nombre: "",
     hora: "",
     mesa: "",
-    img:img,
-    title:title,
-    price:price
+    img: img,
+    title: title,
+    price: price,
   });
   const handleInputs = (e) => {
     setInput({
@@ -43,7 +46,6 @@ export const Modal = ({ info, modal, reserva }) => {
   const activateModal = () => {
     modal(false);
   };
-  console.log(inputs);
   return (
     <Container
       classes={
@@ -92,6 +94,7 @@ export const Modal = ({ info, modal, reserva }) => {
               <Button
                 text="Ordenar"
                 classes="block w-full bg-orange-600 text-white mb-4 p-4 rounded-xl"
+                // onClick={() => setComplete(true)}
               />
               <Button
                 text="Regresar"

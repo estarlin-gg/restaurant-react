@@ -5,7 +5,7 @@ import { OrderItems } from "./OrderItems";
 
 export const Orders = ({ orders, hidden, newClass }) => {
   const [list, setList] = useState([]);
-  console.log(list);
+  // console.log(list);
   useEffect(() => {
     if (Object.keys(orders).length === 0) {
       return;
